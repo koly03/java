@@ -7,6 +7,7 @@ public class Main {
     list.add(5);
     list.add(1);
     list.add(8);
+    list.add(4);
     // list.add(4);
     Fusion list1 = new Fusion(list);
     list1.mergeSort();

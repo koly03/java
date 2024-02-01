@@ -28,26 +28,29 @@ public class Fusion{
         for (int i = middleIndex; i < listLength; i++) {
             secondHalf.add(list.get(i));
         }
+        System.out.println(firstHalf + "  firstHalf");
+        System.out.println(secondHalf + " secondHalf");
 
         divisionOfArray(firstHalf);
         divisionOfArray(secondHalf);
+        System.out.println();
 
         mergeSort(list, firstHalf, secondHalf);
 
      }
-
+     
 
         public static void mergeSort(LinkedList<Integer> list,  LinkedList<Integer> firstHalf, LinkedList<Integer> secondHalf){
             int firstSize = firstHalf.size();
             int secondSize = secondHalf.size();
-            int i = 0, j = 0, k = 0 ;
+            int i = 0, j = 0, k = 0;
             while(i < firstSize && j < secondSize){
                if (firstHalf.get(i) <= secondHalf.get(j)) {
                     list.set(k,(firstHalf.get(i)));
                     i++;
                }
                else{
-                    list.set(k,(firstHalf.get(j)));
+                    list.set(k,(secondHalf.get(j)));
                     j++;
                }
                k++;
@@ -59,7 +62,7 @@ public class Fusion{
                 k++;
             }
 
-            while(j < firstSize){
+            while(j < secondSize){
                 list.set(k,secondHalf.get(j));
                 j++;
                 k++;

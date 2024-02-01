@@ -1,13 +1,13 @@
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Bulle {
-  public Bulle(ArrayList<Integer> list) {
+  public Bulle(LinkedList<Integer> list) {
     this.list = list;
   }
 
-  ArrayList<Integer> list = new ArrayList<>();
+  LinkedList<Integer> list = new LinkedList<>();
 
-  public void sorting() {
+  public void bulleSorting() {
     for (int i = list.size() - 1; i >= 1; i--) {
       for (int j = 0; j < i; j++) {
         if (list.get(j) > list.get(j + 1)) {
@@ -17,7 +17,7 @@ public class Bulle {
     }
   }
 
-  public void permuter(ArrayList<Integer> list, int element1, int element2) {
+  public void permuter(LinkedList<Integer> list, int element1, int element2) {
     Integer x = list.get(element1);
     list.set(element1, list.get(element2));
     list.set(element2, x);

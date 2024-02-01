@@ -28,69 +28,48 @@ public class Fusion{
         for (int i = middleIndex; i < listLength; i++) {
             secondHalf.add(list.get(i));
         }
-        System.out.println(firstHalf + "  firstHalf");
-        System.out.println(secondHalf + " secondHalf");
 
         divisionOfArray(firstHalf);
         divisionOfArray(secondHalf);
-        System.out.println();
 
         mergeSort(list, firstHalf, secondHalf);
 
      }
      
 
-        public static void mergeSort(LinkedList<Integer> list,  LinkedList<Integer> firstHalf, LinkedList<Integer> secondHalf){
-            int firstSize = firstHalf.size();
-            int secondSize = secondHalf.size();
-            int i = 0, j = 0, k = 0;
-            while(i < firstSize && j < secondSize){
-               if (firstHalf.get(i) <= secondHalf.get(j)) {
-                    list.set(k,(firstHalf.get(i)));
-                    i++;
-               }
-               else{
-                    list.set(k,(secondHalf.get(j)));
-                    j++;
-               }
-               k++;
+    public static void mergeSort(LinkedList<Integer> list,  LinkedList<Integer> firstHalf, LinkedList<Integer> secondHalf){
+        int firstSize = firstHalf.size();
+        int secondSize = secondHalf.size();
+        int indexOfFirstPart = 0;
+        int indexOfSecondPart = 0;
+        int indexOfMainArray = 0;
+        while(indexOfFirstPart < firstSize && indexOfSecondPart < secondSize){
+            if (firstHalf.get(indexOfFirstPart) <= secondHalf.get(indexOfSecondPart)) {
+                list.set(indexOfMainArray,(firstHalf.get(indexOfFirstPart)));
+                indexOfFirstPart++;
             }
+            else{
+                list.set(indexOfMainArray,(secondHalf.get(indexOfSecondPart)));
+                indexOfSecondPart++;
+            }
+            indexOfMainArray++;
+        }
             
-            while(i < firstSize){
-                list.set(k, firstHalf.get(i));
-                i++;
-                k++;
-            }
-
-            while(j < secondSize){
-                list.set(k,secondHalf.get(j));
-                j++;
-                k++;
-            }
+        while(indexOfFirstPart < firstSize){
+            list.set(indexOfMainArray, firstHalf.get(indexOfFirstPart));
+            indexOfFirstPart++;
+            indexOfMainArray++;
         }
 
-
-
-
-    // public void mergeSort(){
-    //     LinkedList<Integer> firstHalf = new LinkedList<>();
-    //     LinkedList<Integer> secondHalf = new LinkedList<>();
-    //     divisionOfArray(list, firstHalf, secondHalf);
-
-    //     for (int i = 0; i < .length; i++) {
-            
-    //     }
-    // }
+        while(indexOfSecondPart < secondSize){
+            list.set(indexOfMainArray,secondHalf.get(indexOfSecondPart));
+            indexOfSecondPart++;
+            indexOfMainArray++;
+        }
+    }
 }
 
 
 
 
-    //     for (int i = 0; i < list.size()-1; i+=2) {
-    //         firstHalf.add(list.get(i));
-    //         secondHalf.add(list.get(i+1));
-    //     }
     
-    //     if (list.size() % 2 != 0) {
-    //     firstHalf.add(list.get(list.size()-1));
-    //     }

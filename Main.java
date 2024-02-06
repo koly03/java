@@ -7,8 +7,8 @@ public class Main {
     LinkedList<Integer> list = new LinkedList<>();
     Random randomNumbers = new Random();
 
-    for (int i = 0; i < 10; i++) {
-      list.add(randomNumbers.nextInt(100000));
+    for (int i = 0; i < 1000000; i++) {
+      list.add(randomNumbers.nextInt(1000));
     }
     /*  class Bulle tests
     // Bulle list2 = new Bulle(list);

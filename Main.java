@@ -22,7 +22,7 @@ public class Main {
     // class Fusion test
     System.out.println("Before sorting   " + list + "\n\n");
     // System.out.println();
-    Fusion.divisionOfArray(list);
+    list = Fusion.mergeSort(list);
     System.out.println("After sorting   " + list + "\n\n");
 
   }

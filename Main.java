@@ -1,7 +1,6 @@
 import java.util.Random;
 import java.util.LinkedList;
 import java.util.ArrayList;
-
 public class Main {
   public static void main(String[] args) {
 
@@ -27,7 +26,6 @@ public class Main {
 
     // class Fusion test
     // System.out.println("Before sorting   " + list + "\n\n");
-    
     // // System.out.println();
     // list = Fusion.mergeSort(list);
     // System.out.println("After sorting   " + list + "\n\n");
@@ -40,6 +38,10 @@ public class Main {
     // System.out.println("After sorting   " + list3 + "\n\n");
 
 
-    
+    // class HeapSort test
+    HeapSort list3 = new HeapSort(list2);
+    System.out.println("Before sorting  " + list3 + "\n\n");
+    list3.heapSort(list2);
+    System.out.println("After sorting   " + list3 + "\n\n");
   }
 }

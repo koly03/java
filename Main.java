@@ -14,7 +14,7 @@ public class Main {
     }
 
     
-    
+  }
     // class Bulle tests
     // Bulle list2 = new Bulle(list);
 
@@ -32,16 +32,17 @@ public class Main {
 
 
     // class QuickSort test
-    // QuickSort list3 = new QuickSort(list2, 0, list2.size()-1); 
-    // System.out.println("Before sorting   " + list3 + "\n\n");
-    // list3.quickSorting(list2, 0, list2.size()-1);
-    // System.out.println("After sorting   " + list3 + "\n\n");
+    QuickSort list3 = new QuickSort(list2, 0, list2.size()-1); 
+    System.out.println("Before sorting   " + list3 + "\n\n");
+    list3.quickSorting(list2, 0, list2.size()-1);
+    System.out.println("After sorting   " + list3 + "\n\n");
 
 
     // class HeapSort test
-    HeapSort list3 = new HeapSort(list2);
-    System.out.println("Before sorting  " + list3 + "\n\n");
-    list3.heapSort(list2);
-    System.out.println("After sorting   " + list3 + "\n\n");
-  }
+    // HeapSort list3 = new HeapSort(list2);
+    // System.out.println("Before sorting  " + list3 + "\n\n");
+    // list3.heapSort(list2);
+    // System.out.println("After sorting   " + list3 + "\n\n");
+  
+
 }
